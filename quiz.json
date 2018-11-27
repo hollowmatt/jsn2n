@@ -1,59 +1,56 @@
 {
-  "questions": [
-    {"1": {
+  "questions": {
+  	"1": {
       "If you could have one power, what would it be?": {
         "a":"Live Forever",
         "b":"Infinite Strength",
         "c":"Infinite intelligence"
       }      
-      }
     },
-    {"2": 
+    "2": 
       {
         "If you could only have one season, which would you choose?": {
           "a":"Winter",
           "b":"Summer",
           "c":"Spring"
         }      
-      }
     },
-    {"3": 
+    "3": 
       {
         "If you had a pet, which would it be?": {
           "a":"Cat",
           "b":"Dog",
           "c":"Snake"
         }      
-      }
     }
-  ],
-  "answers": [
-    "aaa",
-    "aab",
-    "aac",
-    "aba",
-    "abb",
-    "abc",
-    "aca",
-    "acb",
-    "acc",
-    "baa",
-    "bab",
-    "bac",
-    "bba",
-    "bbb",
-    "bbc",
-    "bca",
-    "bcb",
-    "bcc",
-    "caa",
-    "cab",
-    "cac",
-    "cba",
-    "cbb",
-    "cbc",
-    "cca",
-    "ccb",
-    "ccc"
-  ]
+  },
+  "answers": {
+  	"aaa":"A Gift from Bob",
+    "aab":"Old Yeller",
+    "aac":"Jurrasic Park",
+    "aba":"Born Free",
+    "abb":"Clifford the Big Red Dog",
+    "abc":"Anaconda",
+    "aca":"A Ghost in the Darkness",
+    "acb":"Dances with Wolves",
+    "acc":"Godzilla",
+    "baa":"Watchmen",
+    "bab":"Game of Thrones",
+    "bac":"Jurrasic World",
+    "bba":"The Mummy",
+    "bbb":"Mad Max",
+    "bbc":"Micro",
+    "bca":"My Life in a Cat House",
+    "bcb":"Return of the King",
+    "bcc":"A Dance with Dragons",
+    "caa":"Farmer Smart's fat cat",
+    "cab":"I Know you Know",
+    "cac":"Snakemaster",
+    "cba":"Cat Poems",
+    "cbb":"What the Dog Knows",
+    "cbc":"Silicon Snake Oil",
+    "cca":"The Algonquin Cat",
+    "ccb":"A Good Dog: The Story of Orson",
+    "ccc":"Adventures with Apples and Snakes"
+  }
 }
