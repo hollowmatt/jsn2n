@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {"1": {
+      "If you could have one power, what would it be?": {
+        "a":"Live Forever",
+        "b":"Infinite Strength",
+        "c":"Infinite intelligence"
+      }      
+      }
+    },
+    {"2": 
+      {
+        "If you could only have one season, which would you choose?": {
+          "a":"Winter",
+          "b":"Summer",
+          "c":"Spring"
+        }      
+      }
+    },
+    {"3": 
+      {
+        "If you had a pet, which would it be?": {
+          "a":"Cat",
+          "b":"Dog",
+          "c":"Snake"
+        }      
+      }
+    }
+  ],
+  "answers": [
+    "aaa",
+    "aab",
+    "aac",
+    "aba",
+    "abb",
+    "abc",
+    "aca",
+    "acb",
+    "acc",
+    "baa",
+    "bab",
+    "bac",
+    "bba",
+    "bbb",
+    "bbc",
+    "bca",
+    "bcb",
+    "bcc",
+    "caa",
+    "cab",
+    "cac",
+    "cba",
+    "cbb",
+    "cbc",
+    "cca",
+    "ccb",
+    "ccc"
+  ]
+}
