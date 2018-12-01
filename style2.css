@@ -12,6 +12,14 @@
     border: 1px solid red;
 }
 
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1200px;
@@ -25,6 +33,7 @@
   background-color: white;
 }
 
+/* Desktop Column Sizing */
 .col-1 {
     width: 8.33%;
     padding: 5px;
@@ -83,4 +92,12 @@
 .col-12 {
     width: 100%;
     padding: 5px;
+}
+
+/* Mobile Sizing */
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	[class*="col-"] {
+	    width: 100%;
+	}
 }
