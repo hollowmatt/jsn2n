@@ -1,29 +1,29 @@
 // JS for the quiz
 (function() {
   //Questions we'll ask
-  const myQuestions = [
+  const images = [
     {
-      question: "If you could have one power, what would it be?",
-      answers: {
-        a: "Live Forever",
-        b: "Infinite Strength",
-        c: "Infinite intelligence"
+      images: {
+        a: "images/01_beach.jpeg",
+        b: "images/01_gym.jpeg",
+        c: "images/01_movie.jpeg",
+        c: "images/01_reading.jpeg"
       }
     },
     {
-      question: "If you could only have one season, which would you choose?",
-      answers: {
-        a: "Winter",
-        b: "Summer",
-        c: "Spring"
+      images: {
+        a: "images/02_winger.jpeg",
+        b: "images/02_summer.jpeg",
+        c: "images/02_spring.jpeg",
+        c: "images/02_fall.jpeg"
       }
     },
     {
-      question: "If you had a pet, which would it be?",
-      answers: {
-        a: "Cat",
-        b: "Dog",
-        c: "Snake"
+      images: {
+        a: "images/03_cat.jpeg",
+        b: "images/03_dog.jpeg",
+        c: "images/03_bird.jpeg",
+        c: "images/03_snake.jpeg"
       }
     }
   ];
@@ -59,11 +59,11 @@
     { ccc : "Adventures with Apples and Snakes" }
   ];
 
-  //Function to build the quiz from the JSON data
-  function buildQuiz() {
+  //Function to build the image boxes from the JSON data
+  function buildImages() {
     const output = [];
     // for each question...
-    myQuestions.forEach((currentQuestion, questionNumber) => {
+    images.forEach((currentQuestion, questionNumber) => {
       // we'll want to store the list of answer choices
       const answers = [];
       // and for each available answer...
