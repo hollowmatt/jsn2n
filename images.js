@@ -107,13 +107,23 @@
   }
 
   //This will show a set of images
-  function showSlide(n) {
+  function showWrap(n) {
+    wrap[currentWrap].classList.remove("active-wrap");
+    wrap[n].classList.add("active-wrap");
+    currentWrap = n;
 
+    if(currentWrap === wrap.length - 1) {
+      nextButton.style.display = "none";
+      submitButton.style.display = "inline-block";
+    } else {
+      nextButton.style.display = "inline-block";
+      submitButton.style.display = "none";
+    }
   }
 
   //show next image set
   function showNextSlide() {
-    showSlide(currentSlide + 1);
+    showWrap(currentWrap + 1);
   }
  
 
@@ -125,10 +135,10 @@
   buildImages();
 
   const nextButton = document.getElementById("next");
-  const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
+  const wrap = document.querySelectorAll(".wrap");
+  let currentWrap = 0;
 
-  showSlide(0);
+  showWrap(0);
 
   // on submit, show recommendations
   submitButton.addEventListener("click", showRecommendation);

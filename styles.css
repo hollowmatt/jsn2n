@@ -261,9 +261,20 @@ button:hover{
 *
 ***********************/
 
-#wrap {
-   overflow: hidden;
-   margin: 10px;
+.wrap {
+  left: 0px;
+  top: 30px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-wrap {
+  overflow: hidden;
+  margin: 10px;
+  opacity: 1;
+  z-index: 2;
 }
 
 .box {
