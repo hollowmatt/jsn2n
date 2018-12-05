@@ -70,7 +70,7 @@
         selections.push(
           `<div class="box">
             <div class="boxInner">
-              <img id='${answerNumber}_${letter}'src='${currentSet.images[letter]}' />
+              <img class='${letter}'src='${currentSet.images[letter]}' />
             </div>
           </div>`
         );
@@ -87,14 +87,17 @@
 
   //Function to show the recommendation based on the answer key
   function showRecommendation() {
-    
-    console.log(answerKey);
-    recommendation = findBook(answerKey, recommendations);
+    let answers ="";
+    answerKey.forEach((answer) => {
+      answers +=answer; //console.log(answerKey.join(""));
+    });
+    recommendation = findBook(answers, recommendations);
     resultsContainer.innerHTML = `You should really read: <br/><div class="title"> ${recommendation} </div>`;
   }
 
   //Function to find a book in the array of answers based on answer given
   function findBook(key, value) {
+    console.log(`${key} : ${value}`);
     var i, len = value.length;
     
     for (i = 0; i < len; i++) {
@@ -111,36 +114,42 @@
     wrap[currentWrap].classList.remove("active-wrap");
     wrap[n].classList.add("active-wrap");
     currentWrap = n;
-
-    if(currentWrap === wrap.length - 1) {
-      nextButton.style.display = "none";
-      submitButton.style.display = "inline-block";
-    } else {
-      nextButton.style.display = "inline-block";
-      submitButton.style.display = "none";
-    }
   }
 
   //show next image set
   function showNextSlide() {
     showWrap(currentWrap + 1);
   }
+
+  function recordEvent(e) {
+    if (e.srcElement.className === 'd') {
+      answerKey.push('c');
+    } else {
+      answerKey.push(e.srcElement.className);
+    }
+
+    if(currentWrap < wrap.length - 1) {
+      showNextSlide();
+    } else {
+      imageContainer.style.display = "none";
+      showRecommendation();
+    }
+  };
  
 
   const imageContainer = document.getElementById("image-container");
   const resultsContainer = document.getElementById("results");
-  const submitButton = document.getElementById("submit");
-
+ 
   // display first set of images right away
   buildImages();
 
+  const answerKey = [];
   const nextButton = document.getElementById("next");
   const wrap = document.querySelectorAll(".wrap");
   let currentWrap = 0;
 
   showWrap(0);
 
-  // on submit, show recommendations
-  submitButton.addEventListener("click", showRecommendation);
-  nextButton.addEventListener("click", showNextSlide);
+  const selectors = document.querySelectorAll('.boxInner');
+  selectors.forEach(select => select.addEventListener('click', recordEvent));
 })();
