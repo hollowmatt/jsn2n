@@ -3,6 +3,7 @@
   //Questions we'll ask
   const myImages = [
     {
+      question: "Which of these images do you most identify with?",
       images: {
         a: "images/01_beach.jpeg",
         b: "images/01_gym.jpeg",
@@ -11,6 +12,7 @@
       }
     },
     {
+      question: "Which season do you like most?",
       images: {
         a: "images/02_winter.jpeg",
         b: "images/02_summer.jpeg",
@@ -19,6 +21,7 @@
       }
     },
     {
+      question: "Which of these would you have as a pet?",
       images: {
         a: "images/03_cat.jpeg",
         b: "images/03_dog.jpeg",
@@ -78,6 +81,7 @@
       //add to output
       output.push(
         `<div class="wrap">
+          <div class="question"> ${currentSet.question} </div>
           ${selections.join("")}
         </div>` 
       );
